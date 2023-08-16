@@ -4,8 +4,6 @@
 >
 > Docker 要提供的解法：以應用程式為核心虛擬化，取代傳統需要 Guest OS 的虛擬化技術
 
-![Docker](https://www.docker.com/sites/default/files/social/docker_facebook_share.png)
-
 在了解 Docker 前首先要先了解何謂虛擬化。
 
 白話來說虛擬化要解決的問題就是：「我寫好了一支程式，在我的電腦上可以正常運作，但搬到你的電腦上可能就爆掉」。會有這樣的問題是因為：每台電腦的作業系統與硬體配置不盡相同，我的程式可能剛好只跟我電腦上的環境相容。而虛擬化要做的就是模擬出一個環境，讓程式可以在不同硬體上執行時，都以為自己在同一個環境中執行。
@@ -34,11 +32,7 @@
 
 ![Container](https://oer.gitlab.io/oer-on-oer-infrastructure/figures/OS/containers.png)
 
-
-
 關於更多虛擬機器跟容器的利弊，請見：[Stack Overflow](https://stackoverflow.com/questions/16047306/how-is-docker-different-from-a-virtual-machine#)。
-
-
 
 ## Docker 三元素
 
@@ -67,8 +61,6 @@ Docker 映像檔是一個模板，用來重複產生容器實體。例如：一�
 最大的公開倉庫註冊伺服器是上面提到過的 [Docker Hub](https://hub.docker.com/)，存放了數量龐大的映像檔供使用者下載，我們可以輕鬆在上面找到各式各樣現成實用的映像檔。
 
 而 Docker 倉庫註冊伺服器的概念就跟 Github 類似，你可以在上面建立多個倉庫，然後透過 push、pull 的方式上傳、存取。
-
-
 
 ## 建立你的第一個 Docker Image
 
@@ -172,8 +164,6 @@ docker run -p 3000:3000 -it 733776b1db0a
 
 接下來要如何關掉 Docker Container 呢？如果發現送 `ctrl + c` 的 signal 進去 Docker Container 沒有反應的話，我們可以開啟另外一個 terminal，然後透過指令 `docker ps` 找到運行中的 Container ID，然後在輸入 `docker stop <ContainerID>`，就可以優雅地關掉我們剛執行的  Docker Container。
 
-
-
 ## Docker 實例
 
 在成功建立了一個 Docker Image 後，我們要了解 Docker 在現實生活中是如何被運用的。在了解實例時，最重要的概念就是要先知道 Docker 的映像檔堆疊概念。
@@ -196,9 +186,6 @@ docker run -p 3000:3000 -it 733776b1db0a
 
 而第二層繼續反覆這樣的程序，從 Alpine-Apache 建立的映像檔透過 Docker 產生新的容器，在容器裡安裝下一層 MySQL，然後把整個容器打包，我們就得到一個含有 Alpine、Apache、MySQL 的映像檔了！
 
-
-
 ## 延伸閱讀
 
 暸解 Docker 的概念與基本教學後，接下來可以透過 [Docker —— 從入門到實踐](<https://philipzheng.gitbooks.io/docker_practice/content/>)，去進一步了解 Docker 的用法囉！
-
