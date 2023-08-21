@@ -68,8 +68,8 @@ Docker 映像檔是一個模板，用來重複產生容器實體。例如：一�
 
 ### 一、安裝 Docker
 
-要建立 Docker Image 的第一步，當然就是要先在電腦上安裝 [Docker](https://www.docker.com/) 囉。
-安裝[WSL2](https://learn.microsoft.com/zh-tw/windows/wsl/install-manual)
+* 建立 Docker Image 的第一步，當然就是要先在電腦上安裝 [Docker](https://www.docker.com/) 囉。
+* windowss要另外安裝[WSL2](https://learn.microsoft.com/zh-tw/windows/wsl/install-manual)
 
 ### 二、準備好打包的目標程式
 
